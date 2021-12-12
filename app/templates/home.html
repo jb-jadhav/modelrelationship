@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>one to relationship</title>
+</head>
+<body>
+    <h3>One to One Relationship</h3>
+    <table border = "3">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Countrycode</th>
+        </tr>
+        
+        {% for c in country %}
+        <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.name}}</td>
+            <td>{{c.countrycode}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <table border = "3">
+        <tr>
+           
+            <th>country</th>
+            <th>Name</th>
+            <th>state</th>
+            
+        </tr>
+    {% for ca in capital %}
+        <tr>
+          
+            <td>{{ca.country}}</td>
+            <td>{{ca.name}}</td>
+            <td>{{ca.state}}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <table border = "3">
+        <tr>
+           
+            <th>name</th>
+            <th>code</th>
+            <th>country</th>
+            
+        </tr>
+    {% for s in sta %}
+        <tr>
+          
+            <td>{{s.name}}</td>
+            <td>{{s.code}}</td>
+            <td>{{s.country}}</td>
+           
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
